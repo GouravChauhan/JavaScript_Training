@@ -1,6 +1,6 @@
 var request = require('request');
 var assert = require('chai').assert;
-var requestData, requestData1, requestResponse;
+var requestData, requestResponse;
 describe('Assignment 2 for Mocha', function() {
 	before(function(done){
 	   request(' https://jsonplaceholder.typicode.com/users',function (error,response,body) {
@@ -9,8 +9,8 @@ describe('Assignment 2 for Mocha', function() {
              console.log(response.headers['content-type']) ;
 
              */
-            requestData = body;
-            //requestData1 = JSON.parse(body);
+            
+            requestData = JSON.parse(body);
             done();	   
 	   });       
     });
@@ -27,10 +27,6 @@ describe('Assignment 2 for Mocha', function() {
             if(requestData[i].username=="Samantha")
                 assert.equal(requestData[i].email,"Nathan@yesenia.net","Samantha mail is not 'Nathan@yesenia.net'");
         }
-        /*for (i=0;i<requestData1.length;i++){
-            if(requestData1[i].username=="Samantha")
-                assert.equal(requestData1[i].email,"Nathan@yesenia.net","Samantha mail is not 'Nathan@yesenia.net'");
-        }*/
 
         done();
 	});
