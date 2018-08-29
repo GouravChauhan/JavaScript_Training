@@ -1,5 +1,7 @@
 {
 	"dependencies": {
-		"request": "latest"
+		"chai": "latest",
+		"request": "latest",
+		"fs": "latest"
 	}
 }
