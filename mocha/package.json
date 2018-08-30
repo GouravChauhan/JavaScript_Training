@@ -2,6 +2,7 @@
 	"dependencies": {
 		"chai": "latest",
 		"request": "latest",
-		"mocha": "latest"
+		"mocha": "latest",
+		"request-promise": "latest"
 	}
 }
